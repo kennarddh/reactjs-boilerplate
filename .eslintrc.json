@@ -4,7 +4,6 @@
 		"es2021": true
 	},
 	"globals": {
-		"process": "readonly",
 		"__dirname": "readonly"
 	},
 	"extends": [
