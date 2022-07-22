@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-import ReactLogo from './assets/React.svg'
-import ViteLogo from './assets/Vite.svg'
+import ReactLogo from '@/Assets/React.svg'
+import ViteLogo from '@/Assets/Vite.svg'
 
-import './App.css'
+import '@/App.css'
 
 const App = () => {
 	const [Count, SetCount] = useState(0)
