@@ -3,7 +3,11 @@
 	"version": "1.0.0",
 	"description": "React js boilerplate",
 	"main": "src/index.js",
-	"scripts": {},
+	"scripts": {
+		"start": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/kennarddh/reactjs-boilerplate.git"
