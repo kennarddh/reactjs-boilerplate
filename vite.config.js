@@ -16,4 +16,7 @@ export default defineConfig({
 		port: 3000,
 	},
 	envPrefix: ['APP_'],
+	build: {
+		outDir: 'build',
+	},
 })
