@@ -11,10 +11,10 @@ const App = () => {
 	return (
 		<div className='App'>
 			<div>
-				<a href='https://vitejs.dev' target='_blank'>
+				<a href='https://vitejs.dev' target='_blank' rel='noreferrer'>
 					<img src={ViteLogo} className='logo' alt='Vite logo' />
 				</a>
-				<a href='https://reactjs.org' target='_blank'>
+				<a href='https://reactjs.org' target='_blank' rel='noreferrer'>
 					<img
 						src={ReactLogo}
 						className='logo react'
