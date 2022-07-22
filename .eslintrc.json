@@ -13,6 +13,7 @@
 		"plugin:import/recommended",
 		"plugin:react-hooks/recommended"
 	],
+	"plugins": ["react", "prettier", "jsx-a11y"],
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true
@@ -36,7 +37,6 @@
 			"version": "detect"
 		}
 	},
-	"plugins": ["react", "prettier"],
 	"rules": {
 		"prettier/prettier": [
 			"warn",
