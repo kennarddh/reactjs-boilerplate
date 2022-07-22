@@ -1,0 +1,23 @@
+{
+	"name": "reactjs-boilerplate",
+	"version": "1.0.0",
+	"description": "React js boilerplate",
+	"main": "src/index.js",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kennarddh/reactjs-boilerplate.git"
+	},
+	"keywords": [
+		"react",
+		"reactjs",
+		"boilerplate",
+		"vite"
+	],
+	"author": "kennarddh",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/kennarddh/reactjs-boilerplate/issues"
+	},
+	"homepage": "https://github.com/kennarddh/reactjs-boilerplate#readme"
+}
