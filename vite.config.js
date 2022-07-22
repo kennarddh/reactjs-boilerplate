@@ -1,23 +1,27 @@
-import { resolve } from 'path'
+import { defineConfig, loadEnv } from 'vite'
 
-import { defineConfig } from 'vite'
+import { resolve } from 'path'
 
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
-export default defineConfig({
-	plugins: [react()],
-	resolve: {
-		alias: {
-			'@': resolve(__dirname, './src'),
+export default ({ mode }) => {
+	const { PORT } = { ...loadEnv(mode, process.cwd(), '') }
+
+	return defineConfig({
+		plugins: [react()],
+		resolve: {
+			alias: {
+				'@': resolve(__dirname, './src'),
+			},
 		},
-	},
-	server: {
-		port: 3000,
-		open: true,
-	},
-	envPrefix: ['APP_'],
-	build: {
-		outDir: 'build',
-	},
-})
+		server: {
+			port: PORT || 3000,
+			open: true,
+		},
+		envPrefix: ['APP_'],
+		build: {
+			outDir: 'build',
+		},
+	})
+}
