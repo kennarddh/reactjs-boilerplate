@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app should render button 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: red;
+}
+
+<button
+    class="c0"
+  />
+</DocumentFragment>
+`;
