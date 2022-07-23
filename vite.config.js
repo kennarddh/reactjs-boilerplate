@@ -8,7 +8,11 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
+	const envPrefix = ['APP_']
+
 	const { PORT, OPEN_BROWSER } = { ...loadEnv(mode, process.cwd(), '') }
+
+	const appEnv = loadEnv(mode, process.cwd(), envPrefix)
 
 	return defineConfig({
 		plugins: [react(), eslintPlugin()],
@@ -21,9 +25,14 @@ export default ({ mode }) => {
 			port: PORT || 3000,
 			open: OPEN_BROWSER === 'true' ? true : false,
 		},
-		envPrefix: ['APP_'],
+		envPrefix,
 		build: {
 			outDir: 'build',
+		},
+		define: {
+			process: {
+				env: { ...process.env, appEnv },
+			},
 		},
 	})
 }
