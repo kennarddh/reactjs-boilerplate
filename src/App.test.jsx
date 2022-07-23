@@ -4,8 +4,14 @@ import { render, screen } from '@testing-library/react'
 
 import App from '@/App'
 
-test('loads and displays greeting', () => {
-	render(<App />)
+describe('app', () => {
+	it('should have text heading', () => {
+		expect.assertions(1)
 
-	expect(screen.getByTestId('custom-element')).toHaveTextContent('heading')
+		render(<App />)
+
+		expect(screen.getByTestId('custom-element')).toHaveTextContent(
+			'heading'
+		)
+	})
 })
