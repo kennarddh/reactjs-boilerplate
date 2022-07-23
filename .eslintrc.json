@@ -1,7 +1,8 @@
 {
 	"env": {
 		"browser": true,
-		"es2021": true
+		"es2021": true,
+		"jest/globals": true
 	},
 	"globals": {
 		"process": "readonly",
@@ -13,7 +14,7 @@
 		"plugin:import/recommended",
 		"plugin:react-hooks/recommended"
 	],
-	"plugins": ["react", "prettier", "jsx-a11y"],
+	"plugins": ["react", "prettier", "jsx-a11y", "jest"],
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true
