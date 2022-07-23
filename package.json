@@ -11,7 +11,12 @@
 		"lint:fix": "eslint --fix src/**/*.{js,jsx}",
 		"prettier:fix": "prettier -w \"src/**/*.{js,jsx}\"",
 		"prettier:check": "prettier -c \"src/**/*.{js,jsx}\"",
-		"clean": "rimraf build"
+		"clean": "rimraf build",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"test:watch:all": "jest --watchAll",
+		"test:coverage": "jest --coverage",
+		"test:changed": "jest -o"
 	},
 	"repository": {
 		"type": "git",
