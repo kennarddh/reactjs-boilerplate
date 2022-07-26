@@ -18,6 +18,7 @@
 		"test:coverage": "jest --coverage",
 		"test:changed": "jest -o",
 		"pre-commit": "npx lint-staged",
+		"pre-push": "npm run test",
 		"prepare": "husky install"
 	},
 	"repository": {
