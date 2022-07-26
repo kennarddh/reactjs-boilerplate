@@ -16,6 +16,7 @@ module.exports = {
 		'plugin:react-hooks/recommended',
 		'plugin:jest/all',
 		'plugin:json/recommended',
+		'plugin:security/recommended',
 	],
 	plugins: ['react', 'prettier', 'jsx-a11y', 'jest'],
 	parserOptions: {
