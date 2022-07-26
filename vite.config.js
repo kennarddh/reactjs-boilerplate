@@ -1,10 +1,11 @@
 import { defineConfig, loadEnv } from 'vite'
 
+// Plugin
 import eslintPlugin from 'vite-plugin-eslint'
+import svgr from 'vite-plugin-svgr'
+import react from '@vitejs/plugin-react'
 
 import { resolve } from 'path'
-
-import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
@@ -15,7 +16,7 @@ export default ({ mode }) => {
 	const appEnv = loadEnv(mode, process.cwd(), envPrefix)
 
 	return defineConfig({
-		plugins: [react(), eslintPlugin()],
+		plugins: [react(), eslintPlugin(), svgr()],
 		resolve: {
 			alias: {
 				'@': resolve(__dirname, './src'),
