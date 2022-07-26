@@ -17,7 +17,7 @@
 		"test:watch:all": "jest --watchAll",
 		"test:coverage": "jest --coverage",
 		"test:changed": "jest -o",
-		"pre-commit": "npm run prettier:fix && npm run lint:fix",
+		"pre-commit": "npx lint-staged",
 		"prepare": "husky install"
 	},
 	"repository": {
