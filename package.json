@@ -17,7 +17,7 @@
 		"test:watch:all": "jest --watchAll --passWithNoTests",
 		"test:coverage": "jest --coverage --passWithNoTests",
 		"test:changed": "jest -o --passWithNoTests",
-		"pre-commit": "lint-staged",
+		"pre-commit": "lint-staged --quiet",
 		"pre-push": "npm run test",
 		"prepare": "husky install"
 	},
