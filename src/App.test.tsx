@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react'
 
 import App from 'App'
 
-describe('App', () => {
-	it('Should have text heading', () => {
+describe('app', () => {
+	it('should have text heading', () => {
 		expect.assertions(1)
 
 		render(<App />)

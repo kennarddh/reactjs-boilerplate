@@ -2,8 +2,8 @@ import { render } from '@testing-library/react'
 
 import Button from './Button'
 
-describe('Button', () => {
-	it('Should render button', () => {
+describe('button', () => {
+	it('should render button', () => {
 		expect.assertions(1)
 
 		const { getByText } = render(<Button />)
@@ -11,7 +11,7 @@ describe('Button', () => {
 		expect(getByText('Button')).toBeInTheDocument()
 	})
 
-	it('Should Snapshot Button', () => {
+	it('should snapshot button', () => {
 		expect.assertions(1)
 
 		const { asFragment } = render(<Button />)
