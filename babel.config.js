@@ -9,7 +9,13 @@ module.exports = {
 				},
 			},
 		],
-		'@babel/preset-react',
+		[
+			'@babel/preset-react',
+			{
+				runtime: 'automatic',
+			},
+		],
+		'@babel/preset-typescript',
 	],
 	plugins: [
 		[
@@ -17,7 +23,7 @@ module.exports = {
 			{
 				root: ['./src'],
 				alias: {
-					'@': './src',
+					'*': './src/*',
 				},
 			},
 		],

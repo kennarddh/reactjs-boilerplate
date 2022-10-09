@@ -6,7 +6,7 @@ describe('button', () => {
 	it('should render button', () => {
 		expect.assertions(1)
 
-		const { getByText } = render(<Button />)
+		const { getByText } = render(<Button>Button</Button>)
 
 		expect(getByText('Button')).toBeInTheDocument()
 	})

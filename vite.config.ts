@@ -7,9 +7,27 @@ import react from '@vitejs/plugin-react'
 
 import { resolve } from 'path'
 
+export const relativeAlias: Record<string, string> = {
+	Components: './src/Components',
+	Contexts: './src/Contexts',
+	Utils: './src/Utils',
+	Hooks: './src/Hooks',
+	Constants: './src/Constants',
+	Api: './src/Api',
+}
+
+export const resolveAlias = Object.entries(relativeAlias).reduce(
+	(prev: Record<string, string>, [key, path]) => {
+		prev[key] = resolve(__dirname, path)
+
+		return prev
+	},
+	{}
+)
+
 // https://vitejs.dev/config/
-export default ({ mode }) => {
-	const envPrefix = ['APP_']
+export default defineConfig(({ mode }) => {
+	const envPrefix: string[ ] = ['APP_']
 
 	const { PORT = 3000, OPEN_BROWSER = 'true' } = {
 		...loadEnv(mode, process.cwd(), ''),
@@ -17,17 +35,10 @@ export default ({ mode }) => {
 
 	const appEnv = loadEnv(mode, process.cwd(), envPrefix)
 
-	return defineConfig({
+	return {
 		plugins: [react(), eslintPlugin(), svgr()],
 		resolve: {
-			alias: {
-				Components: resolve(__dirname, './src/Components'),
-				Contexts: resolve(__dirname, './src/Contexts'),
-				Utils: resolve(__dirname, './src/Utils'),
-				Hooks: resolve(__dirname, './src/Hooks'),
-				Constants: resolve(__dirname, './src/Constants'),
-				Api: resolve(__dirname, './src/Api'),
-			},
+			alias: resolveAlias,
 		},
 		server: {
 			port: PORT || 3000,
@@ -40,5 +51,5 @@ export default ({ mode }) => {
 		define: {
 			env: { ...appEnv },
 		},
-	})
-}
+	}
+})
