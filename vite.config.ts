@@ -21,7 +21,12 @@ export default ({ mode }) => {
 		plugins: [react(), eslintPlugin(), svgr()],
 		resolve: {
 			alias: {
-				'@': resolve(__dirname, './src'),
+				Components: resolve(__dirname, './src/Components'),
+				Contexts: resolve(__dirname, './src/Contexts'),
+				Utils: resolve(__dirname, './src/Utils'),
+				Hooks: resolve(__dirname, './src/Hooks'),
+				Constants: resolve(__dirname, './src/Constants'),
+				Api: resolve(__dirname, './src/Api'),
 			},
 		},
 		server: {

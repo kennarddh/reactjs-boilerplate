@@ -15,6 +15,7 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:react/recommended',
 		'plugin:import/recommended',
+		'plugin:import/typescript',
 		'plugin:react-hooks/recommended',
 		'plugin:jest/all',
 		'plugin:json/recommended',
@@ -34,6 +35,9 @@ module.exports = {
 	},
 	settings: {
 		'import/extensions': ['ts', 'tsx'],
+		'import/parsers': {
+			'@typescript-eslint/parser': ['.ts', '.tsx'],
+		},
 		'import/resolver': {
 			node: {
 				extensions: ['ts', 'tsx'],
@@ -43,6 +47,7 @@ module.exports = {
 				map: [['.', './src']],
 				extensions: ['ts', 'tsx'],
 			},
+			typescript: {},
 		},
 		react: {
 			version: 'detect',
@@ -76,5 +81,6 @@ module.exports = {
 			},
 		],
 		'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
+		'react/react-in-jsx-scope': 'off',
 	},
 }
