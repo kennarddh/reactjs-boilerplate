@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-undef
 module.exports = {
+	parser: '@typescript-eslint/parser',
 	env: {
 		browser: true,
 		es2021: true,
@@ -18,25 +19,29 @@ module.exports = {
 		'plugin:jest/all',
 		'plugin:json/recommended',
 		'plugin:security/recommended',
+		'plugin:@typescript-eslint/eslint-recommended',
+		'plugin:@typescript-eslint/recommended',
 	],
-	plugins: ['react', 'prettier', 'jsx-a11y', 'jest'],
+	plugins: ['react', 'prettier', 'jsx-a11y', 'jest', '@typescript-eslint'],
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
 		},
 		ecmaVersion: 'latest',
 		sourceType: 'module',
+		project: 'tsconfig.json',
+		tsconfigRootDir: __dirname,
 	},
 	settings: {
-		'import/extensions': ['.js', '.jsx'],
+		'import/extensions': ['ts', 'tsx'],
 		'import/resolver': {
 			node: {
-				extensions: ['.js', '.jsx'],
+				extensions: ['ts', 'tsx'],
 				moduleDirectory: ['node_modules', 'src/'],
 			},
 			alias: {
 				map: [['.', './src']],
-				extensions: ['.js', '.jsx'],
+				extensions: ['ts', 'tsx'],
 			},
 		},
 		react: {
@@ -56,7 +61,6 @@ module.exports = {
 		],
 		'import/prefer-default-export': 'off',
 		'linebreak-style': ['error', 'unix'],
-		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
 		quotes: ['error', 'single'],
 		semi: ['error', 'never'],
 		'react/prop-types': 'off',
@@ -67,9 +71,10 @@ module.exports = {
 			'error',
 			'ignorePackages',
 			{
-				js: 'never',
-				jsx: 'never',
+				ts: 'never',
+				tsx: 'never',
 			},
 		],
+		'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
 	},
 }
