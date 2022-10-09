@@ -11,6 +11,6 @@ module.exports = {
 			statements: 80,
 		},
 	},
-	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+	setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 	clearMocks: true,
 }
