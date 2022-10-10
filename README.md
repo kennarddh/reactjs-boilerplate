@@ -10,13 +10,21 @@ npm install
 
 ### Environment Variables
 
+All environment variables for react application must start with `APP_` prefix
+
+To change env prefix change add or remove string from `envPrefix` variable in [`vite.config.json`](./vite.config.ts)
+
+Environtment variables can be accesed using `env.<name>` or [`import.meta.env.<name>`](https://vitejs.dev/guide/env-and-mode.html). Prefix must be included.
+
+Declare env types in `src/env.d.ts` in `ImportMetaEnv` interface
+
 The environment variables can be found and modified in the `.env` file. They come with these default values:
 
 ```bash
 # Port number (optional, default: 3000)
 PORT=3000
 
-# Open browser on start (optional, default: true)
+# Open browser on start (optional, default: true) if value is other than "true" it will be read as false
 OPEN_BROWSER=true
 ```
 
