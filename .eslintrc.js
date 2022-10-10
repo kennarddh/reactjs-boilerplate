@@ -1,10 +1,28 @@
 // eslint-disable-next-line no-undef
 module.exports = {
+	parser: '@typescript-eslint/parser',
 	env: {
 		browser: true,
 		es2021: true,
 		'jest/globals': true,
 	},
+	overrides: [
+		{
+			files: [
+				'vite.config.ts',
+				'babel.config.js',
+				'.eslintrc.js',
+				'jest.config.ts',
+				'jest.setup.ts',
+			],
+			parserOptions: {
+				ecmaFeatures: {
+					jsx: false,
+				},
+				project: 'tsconfig.node.json',
+			},
+		},
+	],
 	globals: {
 		process: 'readonly',
 		env: 'readonly',
@@ -14,37 +32,45 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:react/recommended',
 		'plugin:import/recommended',
+		'plugin:import/typescript',
 		'plugin:react-hooks/recommended',
 		'plugin:jest/all',
 		'plugin:json/recommended',
 		'plugin:security/recommended',
+		'plugin:@typescript-eslint/eslint-recommended',
+		'plugin:@typescript-eslint/recommended',
 	],
-	plugins: ['react', 'prettier', 'jsx-a11y', 'jest'],
+	plugins: ['react', 'prettier', 'jsx-a11y', 'jest', '@typescript-eslint'],
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
 		},
 		ecmaVersion: 'latest',
 		sourceType: 'module',
+		project: 'tsconfig.json',
+		tsconfigRootDir: __dirname,
 	},
 	settings: {
-		'import/extensions': ['.js', '.jsx'],
+		'import/extensions': ['ts', 'tsx'],
+		'import/parsers': {
+			'@typescript-eslint/parser': ['.ts', '.tsx'],
+		},
 		'import/resolver': {
 			node: {
-				extensions: ['.js', '.jsx'],
+				extensions: ['ts', 'tsx'],
 				moduleDirectory: ['node_modules', 'src/'],
 			},
 			alias: {
 				map: [['.', './src']],
-				extensions: ['.js', '.jsx'],
+				extensions: ['ts', 'tsx'],
 			},
+			typescript: {},
 		},
 		react: {
 			version: 'detect',
 		},
 		jest: {
-			// eslint-disable-next-line no-undef
-			version: require('jest/package.json').version,
+			version: 'detect',
 		},
 	},
 	rules: {
@@ -56,7 +82,6 @@ module.exports = {
 		],
 		'import/prefer-default-export': 'off',
 		'linebreak-style': ['error', 'unix'],
-		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
 		quotes: ['error', 'single'],
 		semi: ['error', 'never'],
 		'react/prop-types': 'off',
@@ -67,9 +92,11 @@ module.exports = {
 			'error',
 			'ignorePackages',
 			{
-				js: 'never',
-				jsx: 'never',
+				ts: 'never',
+				tsx: 'never',
 			},
 		],
+		'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
+		'react/react-in-jsx-scope': 'off',
 	},
 }
