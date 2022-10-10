@@ -25,7 +25,6 @@ module.exports = {
 	],
 	globals: {
 		process: 'readonly',
-		env: 'readonly',
 		__dirname: 'readonly',
 	},
 	extends: [
