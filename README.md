@@ -1,4 +1,4 @@
-# React js boilerplate
+# React JS Boilerplate
 
 ## Guide
 
