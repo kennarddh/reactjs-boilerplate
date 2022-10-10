@@ -18,6 +18,7 @@ export const relativeAlias: Record<string, string> = {
 
 export const resolveAlias = Object.entries(relativeAlias).reduce(
 	(prev: Record<string, string>, [key, path]) => {
+		// eslint-disable-next-line security/detect-object-injection
 		prev[key] = resolve(__dirname, path)
 
 		return prev
