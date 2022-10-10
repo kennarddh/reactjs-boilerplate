@@ -6,6 +6,18 @@ module.exports = {
 		es2021: true,
 		'jest/globals': true,
 	},
+	/*
+	Parsing error: "parserOptions.project" has been set for @typescript-eslint/parser.
+	The file does not match your project config: <fileName>.
+	The file must be included in at least one of the projects provided.
+	*/
+	ignorePatterns: [
+		'vite.config.ts',
+		'babel.config.js',
+		'.eslintrc.js',
+		'jest.config.ts',
+		'jest.setup.ts',
+	],
 	globals: {
 		process: 'readonly',
 		env: 'readonly',
