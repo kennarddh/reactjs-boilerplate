@@ -27,7 +27,7 @@ export const resolveAlias = Object.entries(relativeAlias).reduce(
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-	const envPrefix: string[ ] = ['APP_']
+	const envPrefix: string[] = ['APP_']
 
 	const { PORT = 3000, OPEN_BROWSER = 'true' } = {
 		...loadEnv(mode, process.cwd(), ''),
