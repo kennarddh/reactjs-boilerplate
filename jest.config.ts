@@ -5,9 +5,7 @@ import { relativeAlias } from './vite.config'
 const moduleNameMapper: Record<string, string> = Object.entries(
 	relativeAlias
 ).reduce((acc: Record<string, string>, [key, path]: [string, string]) => {
-	const resultKey: string = `${key}/(.*)`
-
-	acc[resultKey] = `<rootDir>/${path.slice(2)}/$1`
+	acc[`${key}/(.*)`] = `<rootDir>/${path.slice(2)}/$1`
 
 	return acc
 }, {})
