@@ -135,3 +135,12 @@ Run tests related to changed files based on hg/git (uncommitted files)
 ```bash
 npm run test:changed
 ```
+
+## Note
+
+-   Babel is only for jest to transpile typescript code. If you don't want to use babel you can use [`vitest`](https://vitest.dev/)
+-   [`tsconfig.json`](./tsconfig.json) is for react app typescript configuration
+-   [`tsconfig.node.json`](./tsconfig.node.json) is for vite and other development tools typescript configuration that will not be included in build result
+-   If you want to disable `pre-commit` or `pre-push` git hook you can remove the hook inside `.husky` directory
+-   If you want to disable dependabot you need to remove [`.github/dependabot.yml`](./.github/dependabot.yml)
+-   If you want to disable codeql analysis you need to remove [`.github/workflows/codeql-analysis.yml`](./.github/workflows/codeql-analysis.yml)
