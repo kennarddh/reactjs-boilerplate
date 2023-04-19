@@ -1,7 +1,7 @@
 import { defineConfig, loadEnv } from 'vite'
 
 // Plugin
-import eslintPlugin from 'vite-plugin-eslint'
+import { checker } from 'vite-plugin-checker'
 import svgr from 'vite-plugin-svgr'
 import react from '@vitejs/plugin-react'
 
@@ -35,7 +35,16 @@ export default defineConfig(({ mode }) => {
 	}
 
 	return {
-		plugins: [react(), eslintPlugin(), svgr()],
+		plugins: [
+			react(),
+			svgr(),
+			checker({
+				typescript: true,
+				eslint: {
+					lintCommand: 'lint:check"',
+				},
+			}),
+		],
 		resolve: {
 			alias: resolveAlias,
 		},
