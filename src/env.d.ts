@@ -5,7 +5,5 @@
 interface ImportMetaEnv {}
 
 interface ImportMeta {
-	readonly env: ImportMetaEnv
+	readonly env: Readonly<ImportMetaEnv>
 }
-
-declare const env: ImportMetaEnv

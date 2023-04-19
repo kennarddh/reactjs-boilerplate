@@ -34,8 +34,6 @@ export default defineConfig(({ mode }) => {
 		...loadEnv(mode, process.cwd(), ''),
 	}
 
-	const appEnv = loadEnv(mode, process.cwd(), envPrefix)
-
 	return {
 		plugins: [react(), eslintPlugin(), svgr()],
 		resolve: {
@@ -48,9 +46,6 @@ export default defineConfig(({ mode }) => {
 		envPrefix,
 		build: {
 			outDir: 'build',
-		},
-		define: {
-			env: { ...appEnv },
 		},
 	}
 })
