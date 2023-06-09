@@ -6,12 +6,15 @@
 	"semi": false,
 	"arrowParens": "avoid",
 	"endOfLine": "lf",
-	
+
 	"importOrder": [
 		"^react$",
 		"^react-router-dom",
 		"^@fortawesome/react-fontawesome",
 		"^@fortawesome",
+		"^vite$",
+		"^@vitejs/",
+		"^vite-",
 		"<THIRD_PARTY_MODULES>",
 		"^Components/",
 		"^Contexts/",

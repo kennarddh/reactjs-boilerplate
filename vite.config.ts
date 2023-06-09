@@ -1,9 +1,11 @@
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
 import { defineConfig, loadEnv } from 'vite'
-// Plugin
+
+import react from '@vitejs/plugin-react'
+
 import { checker } from 'vite-plugin-checker'
 import svgr from 'vite-plugin-svgr'
+
+import { resolve } from 'path'
 
 export const relativeAlias: Record<string, string> = {
 	Components: './src/Components',
