@@ -1,11 +1,9 @@
+import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 import { defineConfig, loadEnv } from 'vite'
-
 // Plugin
 import { checker } from 'vite-plugin-checker'
 import svgr from 'vite-plugin-svgr'
-import react from '@vitejs/plugin-react'
-
-import { resolve } from 'path'
 
 export const relativeAlias: Record<string, string> = {
 	Components: './src/Components',
@@ -14,6 +12,7 @@ export const relativeAlias: Record<string, string> = {
 	Hooks: './src/Hooks',
 	Constants: './src/Constants',
 	Api: './src/Api',
+	Pages: './src/Pages',
 }
 
 export const resolveAlias = Object.entries(relativeAlias).reduce(
