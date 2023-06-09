@@ -40,7 +40,7 @@ export default defineConfig(({ mode }) => {
 			checker({
 				typescript: true,
 				eslint: {
-					lintCommand: 'lint:check"',
+					lintCommand: 'lint:check',
 				},
 			}),
 		],
