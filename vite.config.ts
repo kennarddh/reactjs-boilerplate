@@ -45,7 +45,7 @@ export default defineConfig(({ mode }) => {
 						eslint: {
 							lintCommand: 'lint:check',
 						},
-				  })
+				  }) // eslint-disable-line no-mixed-spaces-and-tabs
 				: null,
 		],
 		resolve: {
