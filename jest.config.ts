@@ -3,7 +3,7 @@ import type { Config } from 'jest'
 import { relativeAlias } from './vite.config'
 
 const moduleNameMapper: Record<string, string> = Object.entries(
-	relativeAlias
+	relativeAlias,
 ).reduce((acc: Record<string, string>, [key, path]: [string, string]) => {
 	acc[`${key}/(.*)`] = `<rootDir>/${path.slice(2)}/$1`
 

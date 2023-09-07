@@ -12,5 +12,5 @@ root.render(
 	<React.StrictMode>
 		<GlobalStyle />
 		<App />
-	</React.StrictMode>
+	</React.StrictMode>,
 )
