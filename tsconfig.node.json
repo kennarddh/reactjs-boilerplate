@@ -2,11 +2,9 @@
 	"compilerOptions": {
 		"composite": true,
 		"module": "ESNext",
+		"lib": ["ESNext"],
 		"moduleResolution": "Node",
 		"allowSyntheticDefaultImports": true
 	},
-	"include": [
-		"vite.config.ts",
-		".eslintrc.js"
-	]
+	"include": ["vite.config.ts", ".eslintrc.js"]
 }

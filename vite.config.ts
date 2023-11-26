@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 import { checker } from 'vite-plugin-checker'
 import svgr from 'vite-plugin-svgr'
 
-import { resolve } from 'path'
+import { resolve } from 'node:path'
 
 export const relativeAlias: Record<string, string> = {
 	Components: './src/Components',
