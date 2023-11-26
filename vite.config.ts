@@ -24,7 +24,7 @@ export const resolveAlias = Object.entries(relativeAlias).reduce(
 
 		return prev
 	},
-	{}
+	{},
 )
 
 // https://vitejs.dev/config/

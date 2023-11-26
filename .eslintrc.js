@@ -7,10 +7,7 @@ module.exports = {
 	},
 	overrides: [
 		{
-			files: [
-				'vite.config.ts',
-				'.eslintrc.js',
-			],
+			files: ['vite.config.ts', '.eslintrc.js'],
 			parserOptions: {
 				ecmaFeatures: {
 					jsx: false,
@@ -43,6 +40,7 @@ module.exports = {
 		sourceType: 'module',
 		project: 'tsconfig.json',
 		tsconfigRootDir: __dirname,
+		extraFileExtensions: ['.json'],
 	},
 	settings: {
 		'import/extensions': ['ts', 'tsx'],
