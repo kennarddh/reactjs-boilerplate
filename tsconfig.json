@@ -18,8 +18,7 @@
 		"baseUrl": "src",
 		"removeComments": true,
 		"sourceMap": true,
-		"noImplicitAny": true,
-		"types": ["jest", "@testing-library/jest-dom"]
+		"noImplicitAny": true
 	},
 	"include": ["src"],
 	"references": [{ "path": "./tsconfig.node.json" }]
