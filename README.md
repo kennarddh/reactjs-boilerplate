@@ -96,49 +96,8 @@ Check the code formatting.
 npm run prettier:check
 ```
 
-### Test
-
-Run all tests
-
-```bash
-npm run test
-```
-
-### Watch test
-
-Watch changed test
-
-```bash
-npm run test:watch
-```
-
-### Watch all test
-
-Watch all test
-
-```bash
-npm run test:watch:all
-```
-
-### Test coverage
-
-Run test coverage
-
-```bash
-npm run test:coverage
-```
-
-### Test changed
-
-Run tests related to changed files based on git (uncommitted files)
-
-```bash
-npm run test:changed
-```
-
 ## Note
 
--   Babel is only for jest to transpile typescript code. If you don't want to use babel you can use [`vitest`](https://vitest.dev/)
 -   [`tsconfig.json`](./tsconfig.json) is for react app typescript configuration
 -   [`tsconfig.node.json`](./tsconfig.node.json) is for vite and other development tools typescript configuration that will not be included in build result
 -   If you want to disable `pre-commit` or `pre-push` git hook you can remove the hook inside `.husky` directory
