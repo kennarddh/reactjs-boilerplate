@@ -12,7 +12,7 @@
 		"prettier:fix": "prettier -w \"src/**/*.{ts,tsx,json,md}\" \"*.md\" \"index.html\"",
 		"prettier:check": "prettier -c \"src/**/*.{ts,tsx,json,md}\" \"*.md\"  \"index.html\"",
 		"clean": "rimraf build",
-		"pre-commit": "lint-staged --quiet",
+		"pre-commit": "lint-staged",
 		"pre-push": "npm run test",
 		"prepare": "husky install"
 	},
