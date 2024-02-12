@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"target": "ESNext",
 		"useDefineForClassFields": true,
-		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"lib": ["ESNext"],
 		"allowJs": false,
 		"skipLibCheck": true,
 		"esModuleInterop": true,
@@ -13,13 +13,12 @@
 		"moduleResolution": "Node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"noEmit": true,
-		"jsx": "react-jsx",
-		"baseUrl": "src",
 		"removeComments": true,
-		"sourceMap": true,
-		"noImplicitAny": true
+		"sourceMap": false,
+		"noImplicitAny": true,
+		"types": ["./eslint.d.ts", "node"],
+		"declaration": false
 	},
-	"include": ["src"],
-	"references": [{ "path": "./tsconfig.node.json" }]
+	"include": ["./eslint.config.ts"],
+	"files": ["./eslint.config.ts"]
 }

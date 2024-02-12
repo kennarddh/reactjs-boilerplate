@@ -5,7 +5,10 @@ import react from '@vitejs/plugin-react'
 import { checker } from 'vite-plugin-checker'
 import svgr from 'vite-plugin-svgr'
 
-import { resolve } from 'node:path'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'url'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export const relativeAlias: Record<string, string> = {
 	Components: './src/Components',
@@ -45,7 +48,7 @@ export default defineConfig(({ mode }) => {
 						eslint: {
 							lintCommand: 'lint:check',
 						},
-				  }) // eslint-disable-line no-mixed-spaces-and-tabs
+					})
 				: null,
 		],
 		resolve: {

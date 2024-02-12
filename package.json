@@ -8,13 +8,14 @@
 		"start": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
+		"lint:build": "tsc --project tsconfig.eslint.json",
 		"lint:check": "eslint src/**/*.{ts,tsx,json} ./vite.config.ts",
 		"lint:fix": "eslint --fix src/**/*.{ts,tsx,json} ./vite.config.ts",
 		"prettier:fix": "prettier -w \"src/**/*.{ts,tsx,json,md}\" \"*.md\" \"index.html\"  \"./vite.config.ts\" \"./tsconfig.json\" \"./tsconfig.node.json\" \"./.lintstagedrc.json\" \"./.eslintrc.js\"",
 		"prettier:check": "prettier -c \"src/**/*.{ts,tsx,json,md}\" \"*.md\"  \"index.html\" \"./vite.config.ts\" \"./tsconfig.json\" \"./tsconfig.node.json\" \"./.lintstagedrc.json\" \"./.eslintrc.js\"",
 		"clean": "rimraf build",
 		"lint:staged": "lint-staged",
-		"prepare": "husky install"
+		"prepare": "npm run lint:build && husky"
 	},
 	"repository": {
 		"type": "git",
@@ -34,6 +35,7 @@
 	"homepage": "https://github.com/kennarddh/reactjs-boilerplate#readme",
 	"devDependencies": {
 		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
+		"@types/eslint": "^8.56.2",
 		"@types/node": "^20.11.17",
 		"@types/react": "^18.2.55",
 		"@types/react-dom": "^18.2.19",
@@ -51,6 +53,7 @@
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-security": "^2.1.0",
+		"globals": "^14.0.0",
 		"husky": "^9.0.10",
 		"lint-staged": "^15.2.2",
 		"prettier": "^3.2.5",
