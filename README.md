@@ -74,7 +74,7 @@ npm run lint:check
 
 ### Lint Fix
 
-Fixes linting errors.
+Fix linting errors.
 
 ```bash
 npm run lint:fix
@@ -82,13 +82,13 @@ npm run lint:fix
 
 ### Lint Staged
 
-Fixes staged code linting errors.
+Fix staged code linting errors.
 
 ```bash
 npm run lint:staged
 ```
 
-### Prettier fix
+### Prettier Fix
 
 Fix the code formatting.
 
@@ -96,7 +96,7 @@ Fix the code formatting.
 npm run prettier:fix
 ```
 
-### Prettier check
+### Prettier Check
 
 Check the code formatting.
 
