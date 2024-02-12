@@ -54,3 +54,7 @@ declare module 'eslint-plugin-react-hooks' {
 declare module 'eslint-plugin-security' {
 	export const configs: IConfigs<'recommended'>
 }
+
+declare module 'eslint-plugin-prettier' {
+	export const configs: IConfigs<'recommended'>
+}

@@ -50,14 +50,15 @@ const config: Linter.FlatConfig[] = [
 		},
 		rules: {
 			...ts.configs['eslint-recommended'].rules,
-			...ts.configs.recommended.rules,
-			...js.configs.recommended.rules,
+			...ts.configs['recommended'].rules,
+			...js.configs['recommended'].rules,
 			...react.configs['recommended'].rules,
 			...importPluginConfigs['recommended'].rules,
 			...importPluginConfigs['typescript'].rules,
 			...reactHooks.configs['recommended'].rules,
 			...json.configs['recommended'].rules,
 			...security.configs['recommended'].rules,
+			...prettier.configs['recommended'].rules,
 			'prettier/prettier': [
 				'warn',
 				{
