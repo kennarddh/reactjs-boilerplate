@@ -13,7 +13,8 @@
 		"prettier:fix": "prettier -w \"src/**/*.{ts,tsx,json,md}\" \"*.md\" \"index.html\"  \"./vite.config.ts\" \"./tsconfig.json\" \"./tsconfig.node.json\" \"./.lintstagedrc.json\" \"./.eslintrc.js\"",
 		"prettier:check": "prettier -c \"src/**/*.{ts,tsx,json,md}\" \"*.md\"  \"index.html\" \"./vite.config.ts\" \"./tsconfig.json\" \"./tsconfig.node.json\" \"./.lintstagedrc.json\" \"./.eslintrc.js\"",
 		"clean": "rimraf build",
-		"pre-commit": "lint-staged",
+		"lint-staged": "lint-staged",
+		"pre-commit": "",
 		"pre-push": "",
 		"prepare": "husky install"
 	},
