@@ -9,12 +9,12 @@
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"lint:build": "tsc --project tsconfig.eslint.json",
-		"lint:check": "eslint && tsc --noemit",
-		"lint:fix": "eslint --fix && tsc --noemit",
-		"lint:staged": "lint-staged",
+		"lint:check": "eslint src/**/*.{ts,tsx,json} ./vite.config.ts && tsc --noemit",
+		"lint:fix": "eslint --fix src/**/*.{ts,tsx,json} ./vite.config.ts && tsc --noemit",
 		"prettier:fix": "prettier -w \"src/**/*.{ts,tsx,json,md}\" \"*.md\" \"index.html\"  \"./vite.config.ts\" \"./tsconfig.json\" \"./tsconfig.node.json\" \"./.lintstagedrc.json\" \"./.eslintrc.js\"",
 		"prettier:check": "prettier -c \"src/**/*.{ts,tsx,json,md}\" \"*.md\"  \"index.html\" \"./vite.config.ts\" \"./tsconfig.json\" \"./tsconfig.node.json\" \"./.lintstagedrc.json\" \"./.eslintrc.js\"",
 		"clean": "rimraf build",
+		"lint:staged": "lint-staged",
 		"prepare": "npm run lint:build && husky"
 	},
 	"repository": {
