@@ -104,10 +104,10 @@ Check the code formatting.
 npm run prettier:check
 ```
 
-## Note
+## Notes
 
--   [`tsconfig.json`](./tsconfig.json) is for react app typescript configuration
--   [`tsconfig.node.json`](./tsconfig.node.json) is for vite and other development tools typescript configuration that will not be included in build result
--   If you want to disable `pre-commit` or `pre-push` git hook you can remove the hook inside `.husky` directory
--   If you want to disable dependabot you need to remove [`.github/dependabot.yml`](./.github/dependabot.yml)
--   If you want to disable codeql analysis you need to remove [`.github/workflows/codeql-analysis.yml`](./.github/workflows/codeql-analysis.yml)
+-   [`tsconfig.json`](./tsconfig.json) is for react app typescript configuration.
+-   [`tsconfig.node.json`](./tsconfig.node.json) is for vite and other development tools typescript configuration that will not be included in build result.
+-   If you want to add `pre-commit` or `pre-push` git hook you can add the command to run in `.husky/pre-commit` and `.husky/pre-push`.
+-   If you want to disable dependabot you need to remove [`.github/dependabot.yml`](./.github/dependabot.yml).
+-   If you want to disable codeql analysis you need to remove [`.github/workflows/codeql-analysis.yml`](./.github/workflows/codeql-analysis.yml).
