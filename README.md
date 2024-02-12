@@ -80,6 +80,14 @@ Fixes linting errors.
 npm run lint:fix
 ```
 
+### Lint Staged
+
+Fixes staged code linting errors.
+
+```bash
+npm run lint:staged
+```
+
 ### Prettier fix
 
 Fix the code formatting.
