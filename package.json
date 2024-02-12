@@ -21,12 +21,6 @@
 		"type": "git",
 		"url": "git+https://github.com/kennarddh/reactjs-boilerplate.git"
 	},
-	"keywords": [
-		"react",
-		"reactjs",
-		"boilerplate",
-		"vite"
-	],
 	"author": "kennarddh",
 	"license": "MIT",
 	"bugs": {
