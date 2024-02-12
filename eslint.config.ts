@@ -87,7 +87,6 @@ const config: Linter.FlatConfig[] = [
 			],
 			'react/react-in-jsx-scope': 'off',
 		},
-
 		settings: {
 			'import/extensions': ['ts', 'tsx'],
 			'import/parsers': {
