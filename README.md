@@ -18,17 +18,7 @@ Environtment variables can be accesed using `env.<name>` or [`import.meta.env.<n
 
 Declare env types in `src/env.d.ts` in `ImportMetaEnv` interface
 
-The environment variables can be found and modified in the `.env` file. They come with these default values:
-
-```bash
-# Port number (optional, default: 3000)
-PORT=3000
-
-# Open browser on start (optional, default: true) if value is other than "true" it will be read as false
-OPEN_BROWSER=true
-```
-
-## Available Scripts
+The environment variables can be found and modified in the `.env` file. See `.env` for default values.
 
 In the project directory, you can run:
 
