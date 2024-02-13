@@ -1,7 +1,8 @@
 {
 	"compilerOptions": {
-		"target": "ES2022" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-		"module": "NodeNext" /* Specify what module code is generated. */,
+		"target": "ESNext",
+		"useDefineForClassFields": true,
+		"moduleResolution": "Bundler",
 		"allowJs": false /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */,
 		"esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
 		"forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
@@ -23,17 +24,17 @@
 		"noImplicitOverride": true /* Ensure overriding members in derived classes are marked with an override modifier. */,
 		"allowUnusedLabels": true /* Disable error reporting for unused labels. */,
 		"allowUnreachableCode": true /* Disable error reporting for unreachable code. */,
-		"useDefineForClassFields": true,
 		"lib": ["DOM", "DOM.Iterable", "ESNext"],
 		"skipLibCheck": true,
 		"allowSyntheticDefaultImports": true,
+		"module": "ESNext",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
 		"jsx": "react-jsx",
 		"baseUrl": "src",
 		"removeComments": true,
-		"sourceMap": true
+		"sourceMap": true,
 	},
 	"include": ["src"],
 	"references": [
