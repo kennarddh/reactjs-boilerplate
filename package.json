@@ -14,8 +14,7 @@
 		"prettier:fix": "prettier -w \"src/**/*.{ts,tsx,json,md}\" \"*.md\" \"index.html\"  \"./vite.config.ts\" \"./tsconfig.json\" \"./tsconfig.node.json\" \"./.lintstagedrc.json\" \"./.eslintrc.js\"",
 		"prettier:check": "prettier -c \"src/**/*.{ts,tsx,json,md}\" \"*.md\"  \"index.html\" \"./vite.config.ts\" \"./tsconfig.json\" \"./tsconfig.node.json\" \"./.lintstagedrc.json\" \"./.eslintrc.js\"",
 		"clean": "rimraf build",
-		"lint:staged": "lint-staged",
-		"prepare": "npm run lint:build && husky"
+		"lint:staged": "lint-staged"
 	},
 	"repository": {
 		"type": "git",
@@ -33,8 +32,7 @@
 		"@types/node": "^20.11.17",
 		"@types/react": "^18.2.55",
 		"@types/react-dom": "^18.2.19",
-		"@typescript-eslint/eslint-plugin": "^6.21.0",
-		"@typescript-eslint/parser": "^6.21.0",
+		"@typescript-eslint/utils": "^7.0.1",
 		"@vitejs/plugin-react": "^4.2.1",
 		"eslint": "^8.56.0",
 		"eslint-import-resolver-alias": "^1.1.2",
@@ -52,6 +50,7 @@
 		"prettier": "^3.2.5",
 		"rimraf": "^5.0.5",
 		"typescript": "^5.3.3",
+		"typescript-eslint": "^7.0.1",
 		"vite": "^5.1.1",
 		"vite-plugin-checker": "^0.6.4",
 		"vite-plugin-svgr": "^4.2.0"

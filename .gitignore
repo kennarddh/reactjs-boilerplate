@@ -282,3 +282,4 @@ dist
 # build
 /build
 /eslint.config.js
+/eslint.config.d.ts

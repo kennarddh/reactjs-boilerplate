@@ -1,10 +1,6 @@
 import js from '@eslint/js'
-import ts from '@typescript-eslint/eslint-plugin'
-import typescriptParser from '@typescript-eslint/parser'
-import { Linter } from 'eslint'
-import importPlugin, {
-	configs as importPluginConfigs,
-} from 'eslint-plugin-import'
+import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
+import importPlugin from 'eslint-plugin-import'
 import json from 'eslint-plugin-json'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import prettier from 'eslint-plugin-prettier'
@@ -14,15 +10,16 @@ import security from 'eslint-plugin-security'
 import globals from 'globals'
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import tsEslint from 'typescript-eslint'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-const config: Linter.FlatConfig[] = [
+export default tsEslint.config(
 	{
 		files: ['src/**/*.{ts,tsx,json}', 'vite.config.ts', 'eslint.config.ts'],
 		ignores: ['**/*.config.js'],
 		languageOptions: {
-			parser: typescriptParser,
+			parser: tsEslint.parser as FlatConfig.Parser,
 			parserOptions: {
 				ecmaFeatures: {
 					jsx: true,
@@ -46,15 +43,17 @@ const config: Linter.FlatConfig[] = [
 			json,
 			import: importPlugin,
 			'jsx-a11y': jsxA11y,
-			'@typescript-eslint': ts,
+			'@typescript-eslint': tsEslint.plugin,
 		},
 		rules: {
-			...ts.configs['eslint-recommended'].rules,
-			...ts.configs['recommended'].rules,
+			...tsEslint.configs['eslintRecommended'].rules,
+			...tsEslint.configs['recommended']
+				.map(config => config.rules)
+				.reduce((acc, val) => ({ ...acc, ...val }), {}),
 			...js.configs['recommended'].rules,
 			...react.configs['recommended'].rules,
-			...importPluginConfigs['recommended'].rules,
-			...importPluginConfigs['typescript'].rules,
+			...importPlugin.configs['recommended'].rules,
+			...importPlugin.configs['typescript'].rules,
 			...reactHooks.configs['recommended'].rules,
 			...json.configs['recommended'].rules,
 			...security.configs['recommended'].rules,
@@ -132,7 +131,16 @@ const config: Linter.FlatConfig[] = [
 				project: 'tsconfig.eslint.json',
 			},
 		},
+		rules: {
+			'import/no-extraneous-dependencies': [
+				'error',
+				{
+					devDependencies: [
+						'typescript-eslint',
+						'@typescript-eslint/utils',
+					],
+				},
+			],
+		},
 	},
-]
-
-export default config
+)
