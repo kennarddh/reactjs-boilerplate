@@ -9,10 +9,10 @@
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"lint:build": "tsc --project tsconfig.eslint.json",
-		"lint:check": "eslint src/**/*.{ts,tsx,json} ./vite.config.ts && tsc --noemit",
-		"lint:fix": "eslint --fix src/**/*.{ts,tsx,json} ./vite.config.ts && tsc --noemit",
-		"prettier:fix": "prettier -w \"src/**/*.{ts,tsx,json,md}\" \"*.md\" \"index.html\"  \"./vite.config.ts\" \"./tsconfig.json\" \"./tsconfig.node.json\" \"./.lintstagedrc.json\" \"./.eslintrc.js\"",
-		"prettier:check": "prettier -c \"src/**/*.{ts,tsx,json,md}\" \"*.md\"  \"index.html\" \"./vite.config.ts\" \"./tsconfig.json\" \"./tsconfig.node.json\" \"./.lintstagedrc.json\" \"./.eslintrc.js\"",
+		"lint:check": "eslint ./**/*.{ts,tsx,json} && tsc --noemit",
+		"lint:fix": "eslint --fix ./**/*.{ts,tsx,json} && tsc --noemit",
+		"prettier:fix": "prettier -w \"./**/*.{html,ts,tsx,json,md,prettierrc}\"",
+		"prettier:check": "prettier -c \"./**/*.{html,ts,tsx,json,md,prettierrc}\"",
 		"clean": "rimraf build",
 		"lint:staged": "lint-staged",
 		"prepare": "npm run lint:build"
@@ -28,6 +28,7 @@
 	},
 	"homepage": "https://github.com/kennarddh/reactjs-boilerplate#readme",
 	"devDependencies": {
+		"@eslint/js": "^9.0.0",
 		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
 		"@types/eslint": "^8.56.9",
 		"@types/node": "^20.12.7",

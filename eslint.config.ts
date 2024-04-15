@@ -136,6 +136,15 @@ export default tsEslint.config(
 				'error',
 				{
 					devDependencies: [
+						'@eslint/js',
+						'eslint-plugin-import',
+						'eslint-plugin-json',
+						'eslint-plugin-jsx-a11y',
+						'eslint-plugin-prettier',
+						'eslint-plugin-react',
+						'eslint-plugin-react-hooks',
+						'eslint-plugin-security',
+						'globals',
 						'typescript-eslint',
 						'@typescript-eslint/utils',
 					],

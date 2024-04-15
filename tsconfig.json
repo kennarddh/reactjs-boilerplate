@@ -34,7 +34,7 @@
 		"jsx": "react-jsx",
 		"baseUrl": "src",
 		"removeComments": true,
-		"sourceMap": true,
+		"sourceMap": true
 	},
 	"include": ["src"],
 	"references": [
