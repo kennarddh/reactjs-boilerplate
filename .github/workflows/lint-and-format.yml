@@ -25,11 +25,11 @@ jobs:
             - name: Clean Install
               run: npm ci
 
-            - name: Lint Fix
-              run: npm run lint:fix
-
             - name: Prettier Fix
               run: npm run prettier:fix
+
+            - name: Lint Fix
+              run: npm run lint:fix
 
             - name: Commit
               uses: stefanzweifel/git-auto-commit-action@v5
