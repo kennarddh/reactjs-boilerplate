@@ -33,7 +33,7 @@
 		"@types/eslint": "^8.56.9",
 		"@types/eslint__js": "^8.42.3",
 		"@types/node": "^20.12.7",
-		"@types/react": "^18.2.78",
+		"@types/react": "^18.3.1",
 		"@types/react-dom": "^18.2.25",
 		"@typescript-eslint/utils": "^7.6.0",
 		"@vitejs/plugin-react": "^4.2.1",
@@ -58,7 +58,7 @@
 		"vite-plugin-svgr": "^4.2.0"
 	},
 	"dependencies": {
-		"react": "^18.2.0",
+		"react": "^18.3.1",
 		"react-dom": "^18.2.0",
 		"styled-components": "^6.1.8"
 	}
