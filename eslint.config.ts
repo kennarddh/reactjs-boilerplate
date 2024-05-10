@@ -58,6 +58,7 @@ export default tsEslint.config(
 			...json.configs['recommended'].rules,
 			...security.configs['recommended'].rules,
 			...prettier.configs['recommended'].rules,
+			'no-unused-vars': 'warn',
 			'prettier/prettier': [
 				'warn',
 				{
