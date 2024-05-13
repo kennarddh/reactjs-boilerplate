@@ -1,4 +1,4 @@
-name: Lint and Format Code
+name: Check and Fix Code
 on:
     pull_request:
         branches: '**'
@@ -8,9 +8,12 @@ concurrency:
     group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
     cancel-in-progress: true
 
+permissions:
+    contents: write
+
 jobs:
-    lint-and-format-code:
-        name: Lint and Format Code
+    check-and-fix-code:
+        name: Check and Fix Code
         runs-on: ubuntu-22.04
         steps:
             - name: Checkout
@@ -31,7 +34,10 @@ jobs:
             - name: Lint Fix
               run: npm run lint:fix
 
+            - name: Types Check
+              run: npm run types:check
+
             - name: Commit
               uses: stefanzweifel/git-auto-commit-action@v5
               with:
-                  commit_message: 'chore: Lint and format code'
+                  commit_message: 'chore: Fix code'
