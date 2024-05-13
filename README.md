@@ -20,11 +20,13 @@ Declare env types in `src/env.d.ts` in `ImportMetaEnv` interface
 
 The environment variables can be found and modified in the `.env` file. See `.env` for default values.
 
+Eslint config file will be transpiled in `prepare` script or during `install`.
+
 In the project directory, you can run:
 
 ### Start
 
-Start development build
+Start development build.
 
 ```bash
 npm start
@@ -32,7 +34,7 @@ npm start
 
 ### Build
 
-build for production.
+Type check and build for production.
 
 ```bash
 npm run build
@@ -40,7 +42,7 @@ npm run build
 
 ### Preview
 
-Preview production build
+Preview production build.
 
 ```bash
 npm run preview
@@ -56,7 +58,7 @@ npm run clean
 
 ### Lint Build
 
-Rebuild eslint config from typescript source
+Transpile [`eslint.config.ts`](./eslint.config.ts) into eslint.config.js because eslint cannot read Typecript config.
 
 ```bash
 npm run lint:build
@@ -64,7 +66,7 @@ npm run lint:build
 
 ### Lint Check
 
-Finds errors in your code.
+Finds linting errors.
 
 ```bash
 npm run lint:check
@@ -76,14 +78,6 @@ Fix linting errors.
 
 ```bash
 npm run lint:fix
-```
-
-### Lint Staged
-
-Fix staged code linting errors.
-
-```bash
-npm run lint:staged
 ```
 
 ### Prettier Fix
@@ -102,10 +96,35 @@ Check the code formatting.
 npm run prettier:check
 ```
 
+### Types Check
+
+Check Typescript types.
+
+```bash
+npm run types:check
+```
+
+### Check
+
+Check linting, code formatting, Typescript types.
+
+```bash
+npm run check
+```
+
+### Fix
+
+Fix linting, code formatting, and check Typescript types.
+
+```bash
+npm run fix
+```
+
 ## Notes
 
 -   [`tsconfig.json`](./tsconfig.json) is for react app typescript configuration.
 -   [`tsconfig.node.json`](./tsconfig.node.json) is for vite and other development tools typescript configuration that will not be included in build result.
--   If you want to add `pre-commit` or `pre-push` git hook you can add the command to run in `.husky/pre-commit` and `.husky/pre-push`.
+-   [`tsconfig.eslint.json`](./tsconfig.eslint.json) is for transpiling [`eslint.config.ts`](./eslint.config.ts) `to eslint.config.js`.
+-   If you want to disable check and fix workflow you need to remove [`.github/workflows/check-and-fix.yml`](./.github/workflows/check-and-fix.yml).
 -   If you want to disable dependabot you need to remove [`.github/dependabot.yml`](./.github/dependabot.yml).
 -   If you want to disable codeql analysis you need to remove [`.github/workflows/codeql-analysis.yml`](./.github/workflows/codeql-analysis.yml).
