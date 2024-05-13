@@ -17,7 +17,6 @@
 		"check": "npm run lint:check && npm run prettier:check && npm run types:check",
 		"fix": "npm run lint:fix && npm run prettier:fix && npm run types:check",
 		"clean": "rimraf build",
-		"lint:staged": "lint-staged",
 		"prepare": "npm run lint:build"
 	},
 	"repository": {
@@ -52,7 +51,6 @@
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-security": "^3.0.0",
 		"globals": "^15.0.0",
-		"lint-staged": "^15.2.2",
 		"prettier": "^3.2.5",
 		"rimraf": "^5.0.5",
 		"typescript": "^5.4.5",
