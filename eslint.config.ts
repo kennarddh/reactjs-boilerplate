@@ -58,7 +58,8 @@ export default tsEslint.config(
 			...json.configs['recommended'].rules,
 			...security.configs['recommended'].rules,
 			...prettier.configs['recommended'].rules,
-			'no-unused-vars': 'warn',
+			'no-unused-vars': 'off',
+			'@typescript-eslint/no-unused-vars': 'warn',
 			'prettier/prettier': [
 				'warn',
 				{
@@ -79,6 +80,12 @@ export default tsEslint.config(
 				{
 					ts: 'never',
 					tsx: 'never',
+				},
+			],
+			'import/no-unresolved': [
+				'error',
+				{
+					ignore: ['^virtual:'],
 				},
 			],
 			'react/jsx-filename-extension': [
