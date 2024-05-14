@@ -16,7 +16,7 @@
 		"types:check": "tsc --noEmit",
 		"check": "npm run lint:check && npm run prettier:check && npm run types:check",
 		"fix": "npm run lint:fix && npm run prettier:fix && npm run types:check",
-		"clean": "rimraf build",
+		"clean": "rimraf build dev-dist",
 		"prepare": "npm run lint:build"
 	},
 	"repository": {
