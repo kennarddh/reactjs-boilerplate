@@ -30,7 +30,7 @@
 	},
 	"homepage": "https://github.com/kennarddh/reactjs-boilerplate#readme",
 	"devDependencies": {
-		"@eslint/js": "^9.0.0",
+		"@eslint/js": "^9.6.0",
 		"@styled/typescript-styled-plugin": "^1.0.1",
 		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
 		"@types/eslint": "^8.56.9",
