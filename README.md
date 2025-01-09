@@ -122,9 +122,9 @@ npm run fix
 
 ## Notes
 
--   [`tsconfig.json`](./tsconfig.json) is for react app typescript configuration.
--   [`tsconfig.node.json`](./tsconfig.node.json) is for vite and other development tools typescript configuration that will not be included in build result.
--   [`tsconfig.eslint.json`](./tsconfig.eslint.json) is for transpiling [`eslint.config.ts`](./eslint.config.ts) `to eslint.config.js`.
--   If you want to disable check and fix workflow you need to remove [`.github/workflows/check-and-fix.yml`](./.github/workflows/check-and-fix.yml).
--   If you want to disable dependabot you need to remove [`.github/dependabot.yml`](./.github/dependabot.yml).
--   If you want to disable codeql analysis you need to remove [`.github/workflows/codeql-analysis.yml`](./.github/workflows/codeql-analysis.yml).
+- [`tsconfig.json`](./tsconfig.json) is for react app typescript configuration.
+- [`tsconfig.node.json`](./tsconfig.node.json) is for vite and other development tools typescript configuration that will not be included in build result.
+- [`tsconfig.eslint.json`](./tsconfig.eslint.json) is for transpiling [`eslint.config.ts`](./eslint.config.ts) `to eslint.config.js`.
+- If you want to disable check and fix workflow you need to remove [`.github/workflows/check-and-fix.yml`](./.github/workflows/check-and-fix.yml).
+- If you want to disable dependabot you need to remove [`.github/dependabot.yml`](./.github/dependabot.yml).
+- If you want to disable codeql analysis you need to remove [`.github/workflows/codeql-analysis.yml`](./.github/workflows/codeql-analysis.yml).
