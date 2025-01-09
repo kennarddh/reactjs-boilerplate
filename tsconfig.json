@@ -47,9 +47,5 @@
 			}
 		]
 	},
-	"include": ["src"],
-	"references": [
-		{ "path": "./tsconfig.node.json" },
-		{ "path": "./tsconfig.eslint.json" }
-	]
+	"include": ["src", "vite.config.ts", "eslint.config.ts", "eslint.d.ts"]
 }

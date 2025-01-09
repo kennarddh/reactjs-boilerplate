@@ -6,6 +6,7 @@ import { checker } from 'vite-plugin-checker'
 import svgr from 'vite-plugin-svgr'
 
 import { dirname, resolve } from 'node:path'
+import process from 'node:process'
 import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -22,7 +23,6 @@ export const relativeAlias: Record<string, string> = {
 
 export const resolveAlias = Object.entries(relativeAlias).reduce(
 	(prev: Record<string, string>, [key, path]) => {
-		// eslint-disable-next-line security/detect-object-injection
 		prev[key] = resolve(__dirname, path)
 
 		return prev
@@ -34,7 +34,7 @@ export const resolveAlias = Object.entries(relativeAlias).reduce(
 export default defineConfig(({ mode }) => {
 	const envPrefix: string[] = ['APP_']
 
-	const { PORT = 3000, OPEN_BROWSER = 'true' } = {
+	const { PORT = '3000', OPEN_BROWSER = 'true' } = {
 		...loadEnv(mode, process.cwd(), ''),
 	}
 
@@ -55,7 +55,7 @@ export default defineConfig(({ mode }) => {
 			alias: resolveAlias,
 		},
 		server: {
-			port: PORT || 3000,
+			port: parseInt(PORT) || 3000,
 			open: OPEN_BROWSER === 'true' ? true : false,
 		},
 		envPrefix,

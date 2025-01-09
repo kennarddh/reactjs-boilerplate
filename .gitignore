@@ -282,9 +282,5 @@ dist
 # Build
 /build
 
-# Eslint ts generated file
-/eslint.config.js
-/eslint.config.d.ts
-
 # vite-pwa dist
 /dev-dist/
