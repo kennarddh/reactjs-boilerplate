@@ -28,7 +28,7 @@
 	},
 	"homepage": "https://github.com/kennarddh/reactjs-boilerplate#readme",
 	"devDependencies": {
-		"@eslint/js": "^9.17.0",
+		"@eslint/js": "^9.18.0",
 		"@styled/typescript-styled-plugin": "^1.0.1",
 		"@trivago/prettier-plugin-sort-imports": "^5.2.1",
 		"@types/eslint": "^9.6.1",
