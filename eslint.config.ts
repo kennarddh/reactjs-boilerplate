@@ -12,15 +12,15 @@ import * as tsEslint from 'typescript-eslint'
 export default tsEslint.config(
 	jsxA11y.flatConfigs.recommended,
 	prettierRecommended,
-	...tsEslint.configs.strictTypeChecked,
-	...tsEslint.configs.stylisticTypeChecked,
+	tsEslint.configs.strictTypeChecked,
+	tsEslint.configs.stylisticTypeChecked,
 	js.configs.recommended,
 	reactPlugin.configs.flat.recommended!,
 	reactPlugin.configs.flat['jsx-runtime']!,
 	eslintPluginImportX.flatConfigs.recommended,
 	eslintPluginImportX.flatConfigs.typescript,
 	reactHooks.configs['recommended-latest'],
-	{ ignores: ['**/build/**/*'] },
+	{ ignores: ['build/**/*'] },
 	{
 		languageOptions: {
 			parser: tsEslint.parser,
