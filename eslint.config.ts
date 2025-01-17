@@ -31,7 +31,6 @@ export default tsEslint.config(
 				sourceType: 'module',
 				tsconfigRootDir: import.meta.dirname,
 				projectService: true,
-				extraFileExtensions: ['.json'],
 			},
 			globals: {
 				...globals.browser,
