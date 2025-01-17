@@ -19,6 +19,7 @@ export default tsEslint.config(
 	reactPlugin.configs.flat['jsx-runtime']!,
 	eslintPluginImportX.flatConfigs.recommended,
 	eslintPluginImportX.flatConfigs.typescript,
+	reactHooks.configs['recommended-latest'],
 	{ ignores: ['**/build/**/*'] },
 	{
 		languageOptions: {
@@ -39,12 +40,10 @@ export default tsEslint.config(
 		},
 		plugins: {
 			react: reactPlugin,
-			'react-hooks': reactHooks,
 			prettier,
 			'@typescript-eslint': tsEslint.plugin,
 		},
 		rules: {
-			...reactHooks.configs.recommended.rules,
 			'no-unused-vars': 'off',
 			'@typescript-eslint/no-unused-vars': 'warn',
 			'prettier/prettier': [

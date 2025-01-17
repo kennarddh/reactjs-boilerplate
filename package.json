@@ -46,7 +46,7 @@
 		"eslint-plugin-jsx-a11y": "^6.10.2",
 		"eslint-plugin-prettier": "^5.2.2",
 		"eslint-plugin-react": "^7.37.4",
-		"eslint-plugin-react-hooks": "^5.1.0",
+		"eslint-plugin-react-hooks": "^5.2.0-canary-d46b04a2-20250117",
 		"globals": "^15.14.0",
 		"jiti": "^2.4.2",
 		"prettier": "^3.4.2",

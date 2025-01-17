@@ -13,7 +13,8 @@ interface IConfigs<T extends string, V = IConfig> {
 }
 
 declare module 'eslint-plugin-react-hooks' {
-	const plugin: FlagConfigPluginWithoutConfigs & IConfigs<'recommended'>
+	const plugin: FlagConfigPluginWithoutConfigs &
+		IConfigs<'recommended-latest'>
 
 	export default plugin
 }
