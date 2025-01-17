@@ -25,15 +25,14 @@
 		"allowUnusedLabels": true,
 		"allowUnreachableCode": true,
 		"skipLibCheck": true,
-		"allowSyntheticDefaultImports": true,
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
-		"lib": ["DOM", "DOM.Iterable", "ES2023"],
-		"jsx": "react-jsx",
-		"baseUrl": "src",
 		"removeComments": true,
 		"sourceMap": true,
+		"jsx": "react-jsx",
+		"baseUrl": "src",
+		"lib": ["DOM", "DOM.Iterable", "ES2023"],
 		"plugins": [
 			{
 				"name": "@styled/typescript-styled-plugin",
