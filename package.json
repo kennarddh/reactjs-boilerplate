@@ -52,7 +52,7 @@
 		"rimraf": "^6.0.1",
 		"typescript": "^5.8.2",
 		"typescript-eslint": "^8.27.0",
-		"vite": "^6.2.2",
+		"vite": "^6.2.5",
 		"vite-plugin-checker": "^0.9.1",
 		"vite-plugin-svgr": "^4.3.0"
 	},
