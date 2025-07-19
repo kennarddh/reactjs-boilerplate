@@ -1,1 +1,19 @@
-{}
+{
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"restoreTerminals.runOnStartup": true,
+	"restoreTerminals.terminals": [
+		{
+			"splitTerminals": [
+				{
+					"name": "Frontend Server",
+					"commands": ["npm start"],
+					"shouldRunCommands": false
+				},
+				{
+					"name": "Shell",
+					"commands": []
+				}
+			]
+		}
+	]
+}

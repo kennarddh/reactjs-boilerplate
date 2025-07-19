@@ -45,5 +45,5 @@
 			}
 		]
 	},
-	"include": ["src", "vite.config.ts", "eslint.config.ts", "eslint.d.ts"]
+	"include": ["src", "vite.config.ts", "eslint.config.ts"]
 }
